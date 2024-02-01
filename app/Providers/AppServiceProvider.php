@@ -25,5 +25,10 @@ class AppServiceProvider extends ServiceProvider
         {
             return Route::post('ajax/dispatcher', $handle);
         });
+
+        Livewire::setScriptRoute(function ($handle)
+        {
+            return Route::get('ajax/dispatcher.js', $handle);
+        });
     }
 }
